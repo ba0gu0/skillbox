@@ -23,6 +23,7 @@ npx skills add ba0gu0/skillbox --skill cobalt-download -g
 | 技能 | 说明 |
 |------|------|
 | [cobalt-download](skills/cobalt-download/) | 通过 cobalt API 从 22 个平台下载视频/音频（YouTube、TikTok、B站、Twitter/X 等） |
+| [jina-web](skills/jina-web/) | 通过 Jina AI Reader & Search API 读取网页和搜索互联网 — 支持 CSS 选择器、截图、缓存控制 |
 
 ## 许可证
 

@@ -23,6 +23,7 @@ npx skills add ba0gu0/skillbox --skill cobalt-download -g
 | Skill | Description |
 |-------|-------------|
 | [cobalt-download](skills/cobalt-download/) | Download videos/audio from 22 platforms (YouTube, TikTok, Bilibili, Twitter/X, etc.) via cobalt API |
+| [jina-web](skills/jina-web/) | Read web pages and search the internet via Jina AI Reader & Search APIs — supports CSS selectors, screenshots, caching control |
 
 ## License
 
