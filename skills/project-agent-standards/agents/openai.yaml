@@ -1,0 +1,5 @@
+interface:
+  display_name: "Project Agent Standards"
+  short_description: "按真实技术栈生成精确、可执行的项目 Agent 工程规范"
+  default_prompt: "使用 $project-agent-standards 审计并更新当前项目的
+    AGENTS.md 工程规范。"
