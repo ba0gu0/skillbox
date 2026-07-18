@@ -83,7 +83,8 @@
 
 - 默认拒绝：CORS、管理接口、上传、外部请求、文件读取都应白名单。
 - session cookie 使用 `HttpOnly`、`Secure`、`SameSite` 和合理过期。
-- CSRF 风险接口使用 token、SameSite 或双提交等防护。
+- CSRF 风险接口必须使用不可预测 token 或双提交 token；`SameSite` 作为
+  额外防护，不能单独替代 token。
 - 密码使用 Argon2id、bcrypt、scrypt 等专用算法。
 - 加密使用标准库或成熟库，不自制协议。
 - 用户输出按上下文编码：HTML、URL、JSON、SQL、shell、日志分别处理。

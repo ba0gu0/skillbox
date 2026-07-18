@@ -73,11 +73,10 @@
 
 ## HTTP Server
 
-- `http.Server` 设置：
-  - `ReadHeaderTimeout`
-  - `ReadTimeout`
-  - `WriteTimeout`
-  - `IdleTimeout`
+- `http.Server` 按接口类型设置 `ReadHeaderTimeout`、`ReadTimeout` 和
+  `IdleTimeout`。
+- 普通响应设置 `WriteTimeout`；SSE、WebSocket 等长连接按连接生命周期
+  单独设计，不能套用会提前截断流的全局写超时。
 - handler 不直接 `panic`；使用中间件恢复并记录。
 - 请求 body 设置大小限制，例如 `http.MaxBytesReader`。
 - 解析 JSON 时限制大小并处理 unknown fields 的策略。
@@ -98,7 +97,8 @@
 
 - 输入结构体字段加 `json` tag。
 - 边界层验证 required、范围、枚举、长度、格式。
-- 不把 `map[string]any` 直接带入业务逻辑；进入业务前收窄类型。
+- Go 1.18+ 的 `map[string]any` 或旧版本的 `map[string]interface{}`
+  只用于边界层；进入业务前收窄类型。
 - 需要保留未知字段时写清原因。
 - 时间使用 `time.Time`；明确时区和格式。
 - 金额不要用 float；使用整数最小单位或 decimal 库。
