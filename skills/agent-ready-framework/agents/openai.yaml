@@ -1,0 +1,5 @@
+interface:
+  display_name: "Agent-Ready Framework"
+  short_description: "把项目升级为可由 Agent 无缝接手执行的工作系统"
+  default_prompt: "使用 $agent-ready-framework 审计并补齐当前项目的
+    Agent 接手体系。"
